@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.box{
+    width: 500px;
+    height: 500px;
+}
+
+.parent{
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+}
+.badge{
+    background-color: darkorange;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 910px;
+}

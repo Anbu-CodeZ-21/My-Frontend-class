@@ -1,0 +1,29 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+
+.card {
+    background-color: #4CAF50;
+    color: white;
+    width: 350px;
+    height: 180px;
+    text-align: center;
+    
+}
+

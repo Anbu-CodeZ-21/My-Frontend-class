@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.html{
+    scroll-behavior: smooth;
+}
+.body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.a{
+    background-color: lightgreen;
+    height: 500px;
+}
+h2{
+    color: red;
+    
+}
+.content1{
+    background-color: blue;
+    color: yellow;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    display: none;
+}
+.content2{
+     background-color: blue;
+    color: yellow;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    visibility: none;
+}
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.screen{
+    background-color: black;
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    margin: 10px;
+    border: blue solid 2px;
+}
+.logo{
+    background-color: green;
+    width: 470px;
+    height: 50px; 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.logo > img{
+    height:40px;
+    border-radius: 3%;
+    
+}
+.bottom{
+    position: fixed;
+    bottom: 30px;
+    width: 300px;
+   
+    
+    
+}

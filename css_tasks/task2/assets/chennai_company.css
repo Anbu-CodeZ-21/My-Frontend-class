@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+h2, p, span {
+    font-family: Arial, sans-serif;
+    display: block;
+    margin: 5px;
+}
+
+.zoho {
+    background-color: lightgreen;
+    color: darkgreen;
+    
+}
+
+.freshworks {
+    background-color: lightblue;
+    color: navy;
+   
+}
+
+.aspire {
+    background-color: lightyellow;
+    color: brown;
+   
+}
+
+.cts {
+    background-color: lavender;
+    color: purple;
+  
+}
+
+.tcs {
+    background-color: mistyrose;
+    color: darkred;
+
+}
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}

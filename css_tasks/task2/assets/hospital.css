@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#heading{
+    background-color: darkred;
+    color: white;
+    text-align: center;
+}
+.hospital{
+
+    background-color: black;
+    color: white;
+    height: auto;
+}
+h2{
+    background-color: aqua;
+    color: brown;
+}
+p{
+    background-color: yellow;
+    color: teal;
+}

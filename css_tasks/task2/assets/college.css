@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#title{
+    color: white;
+    background-color: #003366;
+}
+.department{
+     background-color: #1c5ea5;
+    color: #b41183;
+}
+p{
+    background-color: cadetblue;
+    color: darkgreen;
+}

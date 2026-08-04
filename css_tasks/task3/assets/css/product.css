@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+head{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: fantasy;
+}
+a{
+    text-decoration: none;
+}
+.topic{
+    background-color: limegreen;
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    background-color: aquamarine;
+
+}
+.img{
+    background-color: blueviolet;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 10px red;
+    margin: 2px;
+}
+button{
+    background-color: yellow;
+}
