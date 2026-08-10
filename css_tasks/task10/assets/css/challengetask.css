@@ -1,0 +1,198 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+
+header{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #444;
+    padding: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: red;
+}
+
+
+.hero{
+    background: lightgray;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2{
+    font-size: 36px;
+}
+
+.hero p{
+    font-size: 20px;
+}
+.hero > img{
+    width: 1300px;
+    border-radius: 30px;
+
+}
+
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    flex: 0 0 calc(25% - 20px);
+    background-color: darkorange;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+
+.card h3{
+    margin: 10px 0;
+}
+
+.card p{
+    color: green;
+    margin-bottom: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: darkblue;
+}
+
+
+.categories{
+    text-align: center;
+    padding: 30px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width:992px){
+
+    body{
+        background-color: darkgrey;
+    }
+
+    .card{
+        flex: 0 0 calc(50% - 20px);
+    }
+    .hero > img{
+        width: 992;
+    }
+
+    body{
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width:768px){
+
+    body{
+        background-color: darkseagreen;
+        font-size: 16px;
+    }
+    .hero > img{
+        width: 768px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width:576px){
+
+    body{
+        background: lightgreen;
+        font-size: 14px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        flex: 0 0 100%;
+    }
+    .hero > img{
+        width: 576px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h2{
+        font-size: 24px;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
+}

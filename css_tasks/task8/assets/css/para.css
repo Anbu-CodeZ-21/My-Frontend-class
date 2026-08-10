@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    background-color: aqua;
+    color: black;
+    font-size: x-large;
+}
+p{
+    background-color: black;
+    color: white;
+}
+p::first-letter{
+    font-size: xx-large;
+    color: red;
+}
+p::first-line{
+    color: yellow;
+}
+p::selection{
+    color: green;
+}

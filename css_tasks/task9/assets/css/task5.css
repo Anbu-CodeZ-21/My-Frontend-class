@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box{
+    background-color: burlywood;
+   
+}
+.one{
+    background-color: aquamarine;
+    width: 400px;
+    border-radius: 20px;
+    
+}
+.one > img{
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px ;
+    
+}
+.one > p{
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    width: 300px;
+    
+    margin: 2px;
+
+}
+.one:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+    transform: translateY(-8px);
+}

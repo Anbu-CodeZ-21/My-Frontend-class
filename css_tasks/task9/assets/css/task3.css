@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.product > h2{
+    background-color: black;
+    color: white;
+}
+.card{
+    background-color: burlywood;
+    color: greenyellow; 
+    display: flex;
+    flex-direction: column;
+    
+}
+.card > img{
+    width: 200px;
+    height: 200px;
+}
+.card > button{
+    background-color: black;
+    color: white;
+    width: 100px;
+}
+.card > h2,p{
+    background-color: cornflowerblue;
+    color: black;
+}
+.card:hover{
+    transition: o.4s;
+    transform: translateY(-10px);
+}

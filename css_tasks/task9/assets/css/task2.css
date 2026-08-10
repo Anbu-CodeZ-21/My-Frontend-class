@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.one > h2{
+    background-color: beige;
+    color: black;
+}
+.box{
+    background-color: azure;
+
+}
+.box > img{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+.box > img:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}

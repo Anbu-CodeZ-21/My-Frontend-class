@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;   /* Desktop */
+}
+
+
+header{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+header > nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #555;
+    padding: 15px;
+}
+
+header > nav a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.hero img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+.hero-text{
+    max-width: 400px;
+    
+}
+
+
+.skills, .projects, .contact{
+    background-color: chartreuse;
+    padding: 30px;
+    text-align: center;
+}
+
+footer{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media (max-width:768px){
+
+    body{
+        background-color: lightblue;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width:576px){
+
+    body{
+        background-color: lightgreen;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+}
