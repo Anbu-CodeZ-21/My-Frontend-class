@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration </title>
+</head>
+
+<body>
+    <h1>Employee Registration </h1>
+    <section>
+        <div>
+            <form method="post">
+                <label for="id">Employee ID</label>
+                <input type="text" placeholder="Employe id no" id="id" required>
+                <br><br>
+                <label for="name">Employee Name</label>
+                <input type="text" placeholder="enter name" id="name" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" placeholder="valid email" id="email" required>
+                <br><br>
+                <label for="mobile">Mobile Numer</label>
+                <input type="tel" placeholder="enter your mobile number" id="mobile" minlength="10" maxlength="10"
+                    required>
+                <br><br>
+                <select>
+                    <option>Department</option>
+                    <option value="full stack">Full Stack</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="fronthend">Fronthend</option>
+                    <option value="backend">Backend</option>
+                </select>
+                <br><br>
+                <label for="exp">Experience</label>
+                <input type="text" placeholder="enter your experience" id="exp">
+                <br><br>
+                <label for="salary">Salary</label>
+                <input type="number" placeholder="expt salary" id="salary">
+                <label for="skills">select your skills</label>
+                <input type="checkbox" value="html">HTML
+                <input type="checkbox" value="css">CSS
+                <input type="checkbox" value="js">JS
+                <input type="checkbox" value="react">REACT
+                <br><br>
+                <label for="image">Upload Resume</label>
+                <input type="file" id="image">
+                <br><br>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </section>
+    <br><br><br>
+      <section>
+        <div>
+            <table border="2">
+                <thead>
+                   <th>Employee ID</th>
+                   <th>Employee Name</th>
+                   <th>Department</th>
+                   <th>Experience</th>
+                   <th>Salary</th>
+                   <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Anbu</td>
+                        <td>Full Stack</td>
+                        <td>2 years</td>
+                        <td>35,000</td>
+                        <td>full time</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Pukazhenthi</td>
+                        <td>python </td>
+                        <td>3 years</td>
+                        <td>45,000</td>
+                        <td>full time</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Akash</td>
+                        <td>full stack python</td>
+                        <td>3 years</td>
+                        <td>65,000</td>
+                        <td>full time</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Chandru</td>
+                        <td>fronthend</td>
+                        <td>1 years</td>
+                        <td>15,000</td>
+                        <td>part time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: auto;
+    
+}
+a{
+    text-decoration: none;
+    
+    
+}
+/* Project Section */
+.project {
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+    background: radial-gradient(circle at 20% 20%, #6c2c,transparent 30%),radial-gradient(circle at 80% 80%, rgba(243, 32, 4, 0.8),transparent 30%),black;
+    
+}
+
+/* Main Heading */
+.project h1 {
+    font-size: 45px;
+    color: #eb0000;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.project > p {
+    font-size: 18px;
+    color: #0e1efd;
+    line-height: 1.6;
+    margin-bottom: 45px;
+}
+
+.badge{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ffffff20;
+    border-radius: 50px;
+    background: #ffffff0d;
+    backdrop-filter: blur(15px);
+    color: #bbaaff;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Project Cards */
+.one,
+.two ,
+.three{
+    display: inline-block;
+    width: 280px;
+    min-height: 200px;
+    margin: 15px;
+    padding: 30px;
+    vertical-align: top;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease;
+}
+
+/* Card Hover Effect */
+.one:hover,
+.two:hover,
+.three:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* HTML Card */
+.one {
+    border-top: 6px solid #e34c26;
+}
+
+.one h2 {
+    color: #e34c26;
+}
+
+/* CSS Card */
+.two {
+    border-top: 6px solid #264de4;
+}
+
+.two h2 {
+    color: #264de4;
+}
+  .three{
+    border-top: 6px solid green;
+}
+.three h2{
+    color: green;
+}
+
+/* Card Headings */
+.one h2,
+.two h2,
+.three h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* Card Paragraph */
+.one p,
+.two p ,
+.three p{
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.one a,
+.two a,
+.three a {
+    display: inline-block;
+    padding: 12px 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HTML Button */
+.one a {
+    background-color: #e34c26;
+}
+
+.one a:hover {
+    background-color: #b93617;
+}
+
+/* CSS Button */
+.two a {
+    background-color: #264de4;
+}
+
+.two a:hover {
+    background-color: #1b36a8;
+}
+.three a{
+    background-color: green;
+}
+.three a:hover{
+    background-color: rgb(10, 163, 10);
+}

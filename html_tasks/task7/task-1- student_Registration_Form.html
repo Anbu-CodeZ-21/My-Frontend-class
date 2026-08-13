@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <section>
+        <div>
+            <form method="post">
+                <label for="name">Student Name</label>
+                <input type="text" placeholder="Student name" id="name" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" placeholder="valid email" id="email" required>
+                <br><br>
+                <label for="userpassword">Password</label>
+                <input type="password" placeholder="enter Password" id="userpassword" required>
+                <br><br>
+                <label for="mobile">Mobile Numer</label>
+                <input type="tel" placeholder="enter your mobile number" id="mobile" minlength="10" maxlength="10"
+                    required>
+                <br><br>
+                <label for="userage">Age</label>
+                <input type="number" placeholder="enter your age" id="userage" minlength="1" maxlength="2" required>
+                <br><br>
+                <label for="usergender">Gender</label>
+                <input type="radio" id="usergender" name="gender">MALE
+                <input type="radio" id="usergender" name="gender">FEMALE
+                <br><br>
+                <label for="skills">Select your skills</label>
+                <input type="checkbox" value="html">HTML
+                <input type="checkbox" value="css">CSS
+                <input type="checkbox" value="js">JS
+                <input type="checkbox" value="react">REACT
+                <br><br>
+                <select>
+                    <option>SELECT YOUR COURSE</option>
+                    <option value="full stack">Full Stack</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="fronthend">Fronthend</option>
+                    <option value="backend">Backend</option>
+                </select>
+                <br><br>
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="enter your address"></textarea>
+                <br><br>
+                <label for="image">Upload profile image</label>
+                <input type="file" id="image">
+                <br><br>
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+            </form>
+        </div>
+    </section>
+    <br><br><br>
+      <section>
+        <div>
+            <table border="2">
+                <thead>
+                    <th>SLA ID</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Email</th>
+                    <th>Mobile Number</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Anbu</td>
+                        <td>Full Stack</td>
+                        <td>anbuchandru21@gmail.com</td>
+                        <td>7339518794</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Pukazhenthi</td>
+                        <td>Full Stack </td>
+                        <td>pukazhenthi@gmail.com</td>
+                        <td>8827237128</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Akash</td>
+                        <td>full stack</td>
+                        <td>akash@gmail.com</td>
+                        <td>9323457896</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Chandru</td>
+                        <td>Full Stack</td>
+                        <td>chandru21@gmail.com</td>
+                        <td>76048292448</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+</html>

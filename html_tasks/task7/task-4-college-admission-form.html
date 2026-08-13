@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+</head>
+
+<body>
+    <h1>College Admission FORM</h1>
+    <section>
+        <div>
+            <form method="post">
+                <label for="name">Student Name</label>
+                <input type="text" placeholder="Student name" id="name" required>
+                <br><br>
+                <label for="name">Father Name</label>
+                <input type="text" placeholder="Student name" id="name" required>
+                <br><br>
+                <label for="name">Mother Name</label>
+                <input type="text" placeholder="Student name" id="name" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" placeholder="valid email" id="email" required>
+                <br><br>
+                <label for="mobile">Mobile Numer</label>
+                <input type="tel" placeholder="enter your mobile number" id="mobile" minlength="10" maxlength="10"
+                    required>
+                <br><br>
+                <label for="DOB">Date of birth</label>
+                <input type="datetime-local" required>
+                <br><br>
+                <label for="usergender">Gender</label>
+                <input type="radio" id="usergender" name="gender">MALE
+                <input type="radio" id="usergender" name="gender">FEMALE
+                <br><br>
+                <select>
+                    <option>Department</option>
+                    <option value="full stack">Full Stack</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="fronthend">Fronthend</option>
+                    <option value="backend">Backend</option>
+                </select>
+                <br><br>
+                <label for="percentage">percentage</label>
+                <input type="num" placeholder="enter your percentage" required>
+                <br><br>
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="enter your address"></textarea>
+                <br><br>
+                <label for="image">Passport Size Photo</label>
+                <input type="file" id="image">
+                <br><br>
+                <button type="submit"> SUBMIT</button>
+                <br><br>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div>
+            <table border="2">
+                <thead>
+                    <th>Application ID</th>
+                    <th>Student Name</th>
+                    <th>Department</th>
+                    <th>Percentage</th>
+                    <th>Email</th>
+                    <th>Admission Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Raju</td>
+                        <td>BCA</td>
+                        <td>80%</td>
+                        <td>raju@gmail.com</td>
+                        <td>approver</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jack</td>
+                        <td>B.COM</td>
+                        <td>76%</td>
+                        <td>jack@gmail.com</td>
+                        <td>pending</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
