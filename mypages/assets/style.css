@@ -22,21 +22,22 @@ a{
     min-height: 100vh;
     padding: 80px 20px;
     text-align: center;
-    background: radial-gradient(circle at 20% 20%, #6c2c,transparent 30%),radial-gradient(circle at 80% 80%, rgba(243, 32, 4, 0.8),transparent 30%),black;
+   background-color:#0f172a;
+    
     
 }
 
 /* Main Heading */
 .project h1 {
     font-size: 45px;
-    color: #eb0000;
+    color:#38bdf8;
     margin-bottom: 15px;
 }
 
 /* Description */
 .project > p {
     font-size: 18px;
-    color: #0e1efd;
+    color: #cbd5e1;
     line-height: 1.6;
     margin-bottom: 45px;
 }
@@ -56,7 +57,8 @@ a{
 /* Project Cards */
 .one,
 .two ,
-.three{
+.three,
+.four{
     display: inline-block;
     width: 280px;
     min-height: 200px;
@@ -72,7 +74,8 @@ a{
 /* Card Hover Effect */
 .one:hover,
 .two:hover,
-.three:hover {
+.three:hover,
+.four:hover{
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
@@ -94,17 +97,26 @@ a{
 .two h2 {
     color: #264de4;
 }
+/* bootstrap card */
   .three{
     border-top: 6px solid green;
 }
 .three h2{
     color: green;
 }
+/* tailwindcard */
+.four{
+    border-top:6px solid purple;
+}
+.four h2{
+    color: purple;
+}
 
 /* Card Headings */
 .one h2,
 .two h2,
-.three h2 {
+.three h2,
+.four h2 {
     font-size: 30px;
     margin-bottom: 15px;
 }
@@ -112,7 +124,8 @@ a{
 /* Card Paragraph */
 .one p,
 .two p ,
-.three p{
+.three p,
+.four p{
     color: #555;
     font-size: 16px;
     margin-bottom: 25px;
@@ -121,7 +134,8 @@ a{
 /* Buttons */
 .one a,
 .two a,
-.three a {
+.three a,
+.four a {
     display: inline-block;
     padding: 12px 28px;
     color: white;
@@ -148,9 +162,17 @@ a{
 .two a:hover {
     background-color: #1b36a8;
 }
+/* bootstrap button */
 .three a{
     background-color: green;
 }
 .three a:hover{
     background-color: rgb(10, 163, 10);
+}
+/* tailwind button */
+.four a{
+    background-color: purple;
+}
+.four a:hover{
+    background-color: rgb(218, 77, 218);
 }
