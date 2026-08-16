@@ -53,20 +53,26 @@ a{
     font-size: 13px;
     margin-bottom: 20px;
 }
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+}
 
 /* Project Cards */
 .one,
 .two ,
 .three,
 .four{
-    display: inline-block;
-    width: 280px;
+    
+    flex: 0 0 50%;
+    width: 300px;
     min-height: 200px;
     margin: 15px;
     padding: 30px;
     vertical-align: top;
     background-color: white;
-    border-radius: 18px;
+    border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     transition: 0.3s ease;
 }
@@ -76,7 +82,7 @@ a{
 .two:hover,
 .three:hover,
 .four:hover{
-    transform: translateY(-10px);
+    transform: translatey(-20px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
@@ -176,3 +182,4 @@ a{
 .four a:hover{
     background-color: rgb(218, 77, 218);
 }
+

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future of Electric Vehicles | EV Future Magazine</title>
+  <meta name="description" content="An in-depth editorial analysis exploring the technological breakthroughs, solid-state batteries, autonomous systems, and sustainability metrics shaping the future of electric mobility.">
+  <meta name="keywords" content="Electric Vehicles, EV Future, Solid-State Battery, Clean Energy, Autonomous Driving, Fast Charging, Sustainable Mobility">
+  <meta name="author" content="EV Future Editorial Team">
+
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS (Precompiled CSS) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+  <!-- Custom CSS for Design & Interactivity -->
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME TOKENS
+       ========================================================================== */
+    :root {
+      --bg-midnight: #060b14;
+      --bg-dark-card: rgba(13, 22, 41, 0.78);
+      --bg-card-hover: rgba(19, 32, 60, 0.9);
+      --border-subtle: rgba(56, 189, 248, 0.16);
+      --border-bright: rgba(56, 189, 248, 0.45);
+      --color-cyan-glow: #00f0ff;
+      --color-electric-blue: #0ea5e9;
+      --color-emerald-accent: #10b981;
+      --color-emerald-glow: #34d399;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --gradient-brand: linear-gradient(135deg, #00f0ff 0%, #0ea5e9 50%, #10b981 100%);
+      --gradient-dark: linear-gradient(180deg, #060b14 0%, #0c162c 50%, #060b14 100%);
+      --gradient-card: linear-gradient(145deg, rgba(16, 28, 54, 0.7) 0%, rgba(8, 15, 30, 0.85) 100%);
+      --glow-shadow: 0 0 25px rgba(0, 240, 255, 0.18);
+      --glow-shadow-lg: 0 0 45px rgba(14, 165, 233, 0.28);
+      --glow-shadow-green: 0 0 30px rgba(16, 185, 129, 0.22);
+    }
+
+    /* Base Reset & Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      background-color: var(--bg-midnight);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-midnight);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.025em;
+    }
+
+    /* Radial Glow Accents in Background */
+    .bg-ambient-grid {
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(16, 185, 129, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(0, 240, 255, 0.05) 0%, transparent 50%);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION (PURE CSS RESPONSIVE MENU)
+       ========================================================================== */
+    .site-nav {
+      background: rgba(6, 11, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.3s ease;
+    }
+
+    .nav-brand-logo {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link-custom {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.5rem;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .nav-link-custom:hover {
+      color: var(--color-cyan-glow);
+      background: rgba(56, 189, 248, 0.08);
+      transform: translateY(-1px);
+    }
+
+    /* Pure CSS Hamburger Toggle */
+    #nav-toggle-input {
+      display: none;
+    }
+
+    #nav-toggle-input:checked ~ .mobile-menu-container {
+      max-height: 420px;
+      opacity: 1;
+      visibility: visible;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .mobile-menu-container {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ==========================================================================
+       HERO & MAGAZINE HEADER
+       ========================================================================== */
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #38bdf8 65%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .magazine-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--color-cyan-glow);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--color-emerald-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--color-emerald-glow);
+    }
+
+    /* Futuristic CSS EV Visualization Canvas */
+    .ev-visual-stage {
+      position: relative;
+      border-radius: 1.5rem;
+      background: radial-gradient(ellipse at 50% 60%, rgba(14, 165, 233, 0.18) 0%, rgba(6, 11, 20, 0.8) 75%);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: var(--glow-shadow);
+      padding: 2.5rem 1.5rem;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .ev-visual-stage:hover {
+      border-color: var(--border-bright);
+      box-shadow: var(--glow-shadow-lg);
+    }
+
+    .hud-chip {
+      background: rgba(10, 18, 34, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+    }
+
+    .hud-chip strong {
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hud-chip:hover {
+      border-color: var(--color-cyan-glow);
+      background: rgba(15, 28, 52, 0.95);
+      transform: translateY(-2px);
+    }
+
+    /* Buttons */
+    .btn-futuristic-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #10b981 100%);
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: none;
+      padding: 0.85rem 1.85rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-futuristic-primary:hover {
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(14, 165, 233, 0.55), 0 0 15px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-futuristic-secondary {
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text-main);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-futuristic-secondary:hover {
+      color: var(--color-cyan-glow);
+      border-color: var(--color-cyan-glow);
+      background: rgba(15, 23, 42, 0.9);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       EDITORIAL CARDS & CONTAINERS
+       ========================================================================== */
+    .article-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-bright);
+      box-shadow: var(--glow-shadow);
+    }
+
+    .article-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .article-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon-wrapper {
+      width: 52px;
+      height: 52px;
+      border-radius: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--color-cyan-glow);
+      transition: all 0.3s ease;
+    }
+
+    .article-card:hover .card-icon-wrapper {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(16, 185, 129, 0.25));
+      border-color: var(--color-cyan-glow);
+      color: #ffffff;
+      transform: scale(1.06);
+    }
+
+    /* Section Headers */
+    .section-eyebrow {
+      color: var(--color-emerald-glow);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.75rem;
+      }
+    }
+
+    /* Dropcap */
+    .editorial-lead::first-letter {
+      font-family: 'Space Grotesk', sans-serif;
+      float: left;
+      font-size: 3.8rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 4px;
+      color: var(--color-cyan-glow);
+      font-weight: 800;
+    }
+
+    /* ==========================================================================
+       TECH SPEC SECTION (6 PILLARS)
+       ========================================================================== */
+    .tech-pill-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.4rem;
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--color-emerald-glow);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ==========================================================================
+       PROS & CONS DUAL COLUMN
+       ========================================================================== */
+    .dual-pane-advantage {
+      background: linear-gradient(160deg, rgba(16, 38, 30, 0.6) 0%, rgba(8, 20, 18, 0.85) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 1.25rem;
+      padding: 2.25rem;
+      height: 100%;
+    }
+
+    .dual-pane-challenge {
+      background: linear-gradient(160deg, rgba(38, 24, 24, 0.6) 0%, rgba(24, 12, 12, 0.85) 100%);
+      border: 1px solid rgba(244, 63, 94, 0.25);
+      border-radius: 1.25rem;
+      padding: 2.25rem;
+      height: 100%;
+    }
+
+    .feature-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .feature-list-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .icon-advantage {
+      color: var(--color-emerald-accent);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .icon-challenge {
+      color: #fb7185;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    /* ==========================================================================
+       STATISTICS & BENCHMARK CARDS
+       ========================================================================== */
+    .stat-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 1.25rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--color-cyan-glow);
+      transform: translateY(-5px);
+      box-shadow: var(--glow-shadow);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 20%, #38bdf8 70%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-caption {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ==========================================================================
+       TIMELINE COMPONENT (PURE CSS)
+       ========================================================================== */
+    .timeline-container {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .timeline-container {
+        padding-left: 0;
+      }
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 5%;
+        right: 5%;
+        height: 3px;
+        background: linear-gradient(90deg, #0284c7, #38bdf8, #10b981);
+        z-index: 1;
+      }
+    }
+
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-node {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0b1528;
+      border: 3px solid var(--color-cyan-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+      margin: 0 auto 1.25rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .timeline-step:hover .timeline-node {
+      transform: scale(1.2);
+      background: var(--color-cyan-glow);
+      color: #060b14;
+    }
+
+    /* Vertical line for mobile */
+    @media (max-width: 991.98px) {
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 21px;
+        width: 3px;
+        background: linear-gradient(180deg, #0284c7, #38bdf8, #10b981);
+        z-index: 1;
+      }
+      .timeline-node {
+        margin: 0 0 1rem 0;
+        float: left;
+      }
+      .timeline-content-mobile {
+        margin-left: 60px;
+      }
+    }
+
+    /* ==========================================================================
+       CALL TO ACTION & FOOTER
+       ========================================================================== */
+    .cta-banner {
+      background: radial-gradient(ellipse at 50% 30%, rgba(14, 165, 233, 0.25) 0%, rgba(8, 15, 30, 0.95) 70%),
+                  linear-gradient(135deg, rgba(6, 11, 20, 0.9), rgba(12, 22, 44, 0.9));
+      border: 1px solid var(--border-bright);
+      border-radius: 1.75rem;
+      box-shadow: var(--glow-shadow-lg);
+      padding: 3.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-section {
+      background-color: #04080e;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      color: var(--color-cyan-glow);
+      transform: translateX(3px);
+    }
+
+    /* Magazine Meta Badge */
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 0.9rem;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* Accessibility / Print Optimization */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .site-nav, .cta-banner, .btn-futuristic-primary {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-ambient-grid antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- =========================================================================
+       1. HEADER / NAVIGATION (Clean Modern Navbar, Pure CSS Responsive)
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 site-nav">
+    <nav class="container mx-auto px-4 lg:px-8 py-3.5 flex flex-wrap items-center justify-between" aria-label="Main Navigation">
+      <!-- Website Logo / Title -->
+      <a href="#home" class="flex items-center gap-2.5 text-decoration-none" id="brand-logo">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center text-slate-950 font-bold text-lg shadow-md">
+          <i class="bi bi-lightning-charge-fill"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold font-heading tracking-tight text-white flex items-center gap-1.5">
+            EV <span class="nav-brand-logo">Future</span>
+          </span>
+          <span class="text-xs text-cyan-400 font-medium tracking-wider uppercase -mt-1">Journal of E-Mobility</span>
+        </div>
+      </a>
+
+      <!-- Pure CSS Mobile Menu Checkbox Toggle -->
+      <input type="checkbox" id="nav-toggle-input" aria-label="Toggle navigation menu">
+      <label for="nav-toggle-input" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 cursor-pointer border border-slate-700">
+        <i class="bi bi-list text-2xl"></i>
+      </label>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#home" class="nav-link-custom">Home</a>
+        <a href="#intro" class="nav-link-custom">Introduction</a>
+        <a href="#benefits" class="nav-link-custom">Why EVs Matter</a>
+        <a href="#technology" class="nav-link-custom">Technology</a>
+        <a href="#advantages" class="nav-link-custom">Pros & Cons</a>
+        <a href="#future" class="nav-link-custom">Future Trends</a>
+        <a href="#timeline" class="nav-link-custom">Timeline</a>
+      </div>
+
+      <!-- Action Button in Navbar -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#future" class="btn-futuristic-primary text-sm py-2 px-4">
+          <i class="bi bi-stars"></i> Read Outlook
+        </a>
+      </div>
+
+      <!-- Mobile Navigation Drawer (Pure CSS Collapse) -->
+      <div class="mobile-menu-container w-full lg:hidden flex flex-col gap-2 border-t border-slate-800/80 mt-2">
+        <a href="#home" class="nav-link-custom py-2 px-3">Home</a>
+        <a href="#intro" class="nav-link-custom py-2 px-3">Introduction</a>
+        <a href="#benefits" class="nav-link-custom py-2 px-3">Why EVs Matter</a>
+        <a href="#technology" class="nav-link-custom py-2 px-3">Technology</a>
+        <a href="#advantages" class="nav-link-custom py-2 px-3">Advantages & Challenges</a>
+        <a href="#future" class="nav-link-custom py-2 px-3">Future Outlook</a>
+        <a href="#timeline" class="nav-link-custom py-2 px-3">Timeline</a>
+        <div class="pt-2">
+          <a href="#cta" class="btn-futuristic-primary w-full justify-center text-sm py-2.5">
+            <i class="bi bi-speedometer2"></i> Explore Innovations
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION (Editorial Cover & Futuristic EV Visual)
+         ========================================================================= -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="row align-items-center g-5">
+          <!-- Left Column: Editorial Headline & Overview -->
+          <div class="col-lg-6">
+            <!-- Magazine Pill Badge -->
+            <div class="magazine-badge mb-4">
+              <span class="pulse-dot"></span>
+              <span>Special Technology Deep-Dive • 2026 Edition</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 hero-gradient-text">
+              The Future of Electric Vehicles
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-6 font-normal">
+              How breakthrough solid-state batteries, autonomous software platforms, and ultra-fast charging ecosystems are converging to engineer the cleanest transportation revolution in human history.
+            </p>
+
+            <!-- Article Author & Metadata Byline -->
+            <div class="flex items-center gap-3 py-3 border-t border-b border-slate-800 mb-8">
+              <div class="author-avatar font-heading">EV</div>
+              <div>
+                <div class="text-sm font-semibold text-white">By Dr. Marcus Vance &amp; Elena Rostova</div>
+                <div class="text-xs text-slate-400 flex items-center gap-2">
+                  <span>Automotive &amp; Energy Intelligence</span>
+                  <span>•</span>
+                  <span>14 Min Read</span>
+                  <span>•</span>
+                  <span class="text-cyan-400 font-medium">Updated 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#intro" class="btn-futuristic-primary" id="hero-explore-btn">
+                <span>Explore the Future</span>
+                <i class="bi bi-arrow-down-circle-fill text-lg"></i>
+              </a>
+              <a href="#technology" class="btn-futuristic-secondary" id="hero-tech-specs-btn">
+                <i class="bi bi-cpu"></i>
+                <span>View Tech Specs</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive CSS-Based EV Graphic & HUD Diagnostics -->
+          <div class="col-lg-6">
+            <div class="ev-visual-stage">
+              <!-- Visual Top HUD Bar -->
+              <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="inline-block w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                  <span class="text-xs font-mono text-cyan-300 font-semibold tracking-wider uppercase">POWERTRAIN ARCHITECTURE // 800V DUAL-MOTOR</span>
+                </div>
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">ONLINE</span>
+              </div>
+
+              <!-- Futuristic CSS SVG Vehicle Blueprint Graphic -->
+              <div class="relative py-4 flex items-center justify-center">
+                <svg viewBox="0 0 600 280" class="w-full h-auto max-w-lg mx-auto filter drop-shadow-2xl" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Futuristic Electric Vehicle Blueprint Illustration">
+                  <!-- Ambient Grid -->
+                  <defs>
+                    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.1" />
+                      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1" />
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0.2" />
+                    </linearGradient>
+                    <linearGradient id="batteryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8" />
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9" />
+                    </linearGradient>
+                    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#00f0ff" stop-opacity="1"/>
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.2"/>
+                    </radialGradient>
+                  </defs>
+
+                  <!-- Ground Speed Lines -->
+                  <line x1="30" y1="240" x2="570" y2="240" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.5" stroke-dasharray="12 8" />
+                  <line x1="80" y1="248" x2="520" y2="248" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1" stroke-dasharray="20 15" />
+
+                  <!-- EV Aerodynamic Body Silhouette -->
+                  <path d="M 70 200 
+                           C 75 165, 110 145, 160 140 
+                           C 210 135, 270 95, 340 95 
+                           C 420 95, 470 125, 510 155 
+                           C 535 175, 545 195, 535 210 
+                           L 470 210 
+                           C 465 180, 425 180, 420 210 
+                           L 200 210 
+                           C 195 180, 155 180, 150 210 
+                           Z" 
+                        fill="rgba(15, 28, 54, 0.85)" stroke="url(#cyanLine)" stroke-width="2.5" />
+
+                  <!-- Cabin Roof & Windshield Glassline -->
+                  <path d="M 230 140 
+                           L 290 105 
+                           C 335 105, 395 105, 430 140 
+                           Z" 
+                        fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="1.5" />
+
+                  <!-- Front LED Light Bar -->
+                  <path d="M 525 175 Q 545 180 540 190" stroke="#00f0ff" stroke-width="4" stroke-linecap="round" filter="drop-shadow(0 0 8px #00f0ff)" />
+                  
+                  <!-- Rear Neon Taillight Blade -->
+                  <path d="M 68 180 Q 64 190 75 195" stroke="#f43f5e" stroke-width="4" stroke-linecap="round" filter="drop-shadow(0 0 6px #f43f5e)" />
+
+                  <!-- Integrated Floor Battery Pack Structural Cross-section -->
+                  <rect x="205" y="195" width="210" height="15" rx="4" fill="url(#batteryGlow)" stroke="#34d399" stroke-width="1.5" />
+                  <text x="310" y="206" fill="#04121a" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="bold" text-anchor="middle">SOLID-STATE CELL PACK (120 kWh)</text>
+
+                  <!-- Front Aero Wheel -->
+                  <circle cx="445" cy="210" r="32" fill="#0b1329" stroke="#38bdf8" stroke-width="2" />
+                  <circle cx="445" cy="210" r="18" fill="#132347" stroke="url(#cyanLine)" stroke-width="1.5" />
+                  <circle cx="445" cy="210" r="7" fill="url(#hubGlow)" />
+
+                  <!-- Rear Aero Wheel -->
+                  <circle cx="175" cy="210" r="32" fill="#0b1329" stroke="#38bdf8" stroke-width="2" />
+                  <circle cx="175" cy="210" r="18" fill="#132347" stroke="url(#cyanLine)" stroke-width="1.5" />
+                  <circle cx="175" cy="210" r="7" fill="url(#hubGlow)" />
+
+                  <!-- Electric Energy Flux Particle Stream -->
+                  <path d="M 210 202 L 440 202" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="6 4" />
+                  <path d="M 310 195 L 310 135 L 430 135" stroke="rgba(16, 185, 129, 0.7)" stroke-width="1.2" stroke-dasharray="4 4" />
+
+                  <!-- Aero Vector Flow Lines -->
+                  <path d="M 90 120 Q 230 80 400 90 T 560 140" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1" stroke-dasharray="3 3" />
+                  <path d="M 120 100 Q 270 60 440 75 T 570 125" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1" />
+                </svg>
+              </div>
+
+              <!-- HUD Diagnostic Cards Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+                <div class="hud-chip">
+                  <div class="text-xs text-slate-400">Peak Efficiency</div>
+                  <strong>94.2%</strong>
+                </div>
+                <div class="hud-chip">
+                  <div class="text-xs text-slate-400">Drag Coeff (Cd)</div>
+                  <strong>0.198</strong>
+                </div>
+                <div class="hud-chip">
+                  <div class="text-xs text-slate-400">0–100 km/h</div>
+                  <strong class="text-emerald-400">2.1s</strong>
+                </div>
+                <div class="hud-chip">
+                  <div class="text-xs text-slate-400">Max Range</div>
+                  <strong class="text-cyan-400">920 km</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. INTRODUCTION SECTION (Context, Drivers & Tri-Party Catalyst)
+         ========================================================================= -->
+    <section id="intro" class="py-16 md:py-24 border-t border-slate-800/80 bg-slate-950/40">
+      <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+        <div class="text-center mb-12">
+          <span class="section-eyebrow">The Paradigm Shift</span>
+          <h2 class="section-title">Redefining Mobility for a Carbon-Neutral Century</h2>
+          <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+            From niche experimental prototypes to dominant global automotive platforms, electric vehicles have crossed the inflection point of mass-market viability.
+          </p>
+        </div>
+
+        <article class="article-card mb-12">
+          <div class="space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
+            <p class="editorial-lead">
+              Electric vehicles (EVs) utilize advanced electrochemical energy storage and electromagnetic traction motors rather than the reciprocating internal combustion engines (ICE) that dominated the 20th century. By converting stored electrical energy directly into instantaneous mechanical torque with zero tailpipe emissions, EVs present an inherently superior thermodynamic framework for human transportation.
+            </p>
+            <p>
+              The accelerating surge in worldwide adoption is driven by an unprecedented convergence of falling battery cell costs, heightened climate legislation, and leaps in silicon-carbide power electronics. What was once seen as an ecological compromise is now recognized as a superior consumer experience: offering whisper-quiet cabins, instantaneous throttle response, intelligent automated vehicle software, and significantly lower lifetime operating costs.
+            </p>
+          </div>
+
+          <!-- Tri-Party Catalyst: Governments, Manufacturers, Consumers -->
+          <div class="mt-10 pt-8 border-t border-slate-800">
+            <h3 class="text-xl font-bold text-white mb-6 font-heading flex items-center gap-2">
+              <i class="bi bi-diagram-3-fill text-cyan-400"></i> The Three-Pillar Catalyst Driving EV Exponential Growth
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-cyan-400 font-bold text-lg mb-2 font-heading flex items-center gap-2">
+                  <i class="bi bi-bank2"></i> 1. Governments &amp; Policy
+                </div>
+                <p class="text-sm text-slate-300">
+                  Enacting binding 2035 zero-emission vehicle mandates, subsidies, emissions penalties, and national fast-charging grid investments.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-emerald-400 font-bold text-lg mb-2 font-heading flex items-center gap-2">
+                  <i class="bi bi-buildings"></i> 2. Automakers &amp; Tech
+                </div>
+                <p class="text-sm text-slate-300">
+                  Committing over $1.2 trillion in dedicated gigafactories, custom EV skateboards, and software-defined vehicle architectures.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="text-sky-400 font-bold text-lg mb-2 font-heading flex items-center gap-2">
+                  <i class="bi bi-people-fill"></i> 3. Global Consumers
+                </div>
+                <p class="text-sm text-slate-300">
+                  Prioritizing total cost of ownership (TCO) savings, home-charging convenience, silent performance, and climate consciousness.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. WHY ELECTRIC VEHICLES MATTER (4 Key Impact Pillars)
+         ========================================================================= -->
+    <section id="benefits" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="section-eyebrow">Socio-Economic &amp; Environmental Impact</span>
+          <h2 class="section-title">Why Electric Vehicles Matter</h2>
+          <p class="text-slate-400 text-lg">
+            Transitioning global fleets to electric propulsion delivers transformative ecological, financial, and geopolitical advantages.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1: Reduced Emissions -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article-card" id="card-emissions">
+              <div class="card-icon-wrapper">
+                <i class="bi bi-tree-fill"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Zero Direct Emissions</h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                EVs eliminate tailpipe particulate matter ($PM_{2.5}$), nitrogen oxides ($NO_x$), and carbon monoxide, drastically purifying urban air quality while cutting cradle-to-grave lifecycle emissions by up to 70% compared to gasoline vehicles.
+              </p>
+              <div class="text-xs font-mono text-emerald-400 bg-emerald-950/40 p-2 rounded border border-emerald-500/20">
+                <i class="bi bi-check-circle-fill me-1"></i> Net-Zero Grid Synergy
+              </div>
+            </article>
+          </div>
+
+          <!-- Pillar 2: Lower Operating Costs -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article-card" id="card-operating-costs">
+              <div class="card-icon-wrapper">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Lower Operating Costs</h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Electricity costs per kilometer are 60–75% cheaper than fossil fuels. With approximately 20 moving parts in an electric powertrain compared to over 2,000 in an ICE vehicle, oil changes, spark plugs, and transmission repairs become obsolete.
+              </p>
+              <div class="text-xs font-mono text-cyan-400 bg-cyan-950/40 p-2 rounded border border-cyan-500/20">
+                <i class="bi bi-graph-down-arrow me-1"></i> -65% Maintenance Overhead
+              </div>
+            </article>
+          </div>
+
+          <!-- Pillar 3: Superior Energy Efficiency -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article-card" id="card-energy-efficiency">
+              <div class="card-icon-wrapper">
+                <i class="bi bi-speedometer"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">High Energy Efficiency</h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Electric motors convert over 85–90% of electrical energy from the grid directly into kinetic motion. In contrast, internal combustion engines waste over 75% of fuel energy as radiant friction and thermal exhaust waste heat.
+              </p>
+              <div class="text-xs font-mono text-emerald-400 bg-emerald-950/40 p-2 rounded border border-emerald-500/20">
+                <i class="bi bi-lightning-fill me-1"></i> ~90% Powertrain Efficiency
+              </div>
+            </article>
+          </div>
+
+          <!-- Pillar 4: Fossil Fuel Independence -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="article-card" id="card-fossil-independence">
+              <div class="card-icon-wrapper">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Energy Sovereignty</h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Electrification decouples domestic transit from vulnerable, volatile international oil markets. Countries and households can charge vehicles using locally harvested solar, wind, hydro, and geothermal clean energy resources.
+              </p>
+              <div class="text-xs font-mono text-sky-400 bg-sky-950/40 p-2 rounded border border-sky-500/20">
+                <i class="bi bi-sun-fill me-1"></i> 100% Renewable Capable
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. EV TECHNOLOGY BREAKTHROUGHS (6 Architectural Pillars)
+         ========================================================================= -->
+    <section id="technology" class="py-16 md:py-24 bg-slate-950/60 border-t border-b border-slate-800/80">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="section-eyebrow">Under the Hood</span>
+          <h2 class="section-title">Core EV Technological Innovations</h2>
+          <p class="text-slate-400 text-lg">
+            A comprehensive breakdown of the cutting-edge engineering systems powering the next generation of intelligent electric vehicles.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Tech 1: Battery Technology -->
+          <article class="article-card" id="tech-battery">
+            <span class="tech-pill-badge">Electrochemical Core</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-battery-charging"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">Advanced Batteries</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Shifting from conventional liquid-electrolyte Lithium-ion (NMC/LFP) to solid-state chemistry using ceramic and polymer electrolytes. Solid-state packs double gravimetric energy density to &gt;450 Wh/kg while eliminating thermal runaway fire risks.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Solid-State Electrolytes</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Silicon-Composite Anodes</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> 1,000,000+ km Lifecycle Durability</li>
+            </ul>
+          </article>
+
+          <!-- Tech 2: Fast Charging -->
+          <article class="article-card" id="tech-charging">
+            <span class="tech-pill-badge">Power Electronics</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">800V Ultra-Fast DC</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Modern 800V and 1000V Silicon Carbide (SiC) architectures allow charge rates up to 350kW–500kW. This enables replenishing 300+ km of driving range in under 10–12 minutes, approaching standard petrol pump refueling durations.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Liquid-Cooled Cable Connectors</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> SiC MOSFET Inverters</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Active Pre-Conditioning Thermal Control</li>
+            </ul>
+          </article>
+
+          <!-- Tech 3: Regenerative Braking -->
+          <article class="article-card" id="tech-braking">
+            <span class="tech-pill-badge">Kinetic Harvesting</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">Regenerative Braking</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Reverses the electric motor into a high-capacity generator during deceleration. Converts kinetic momentum back into stored battery chemical energy, recapturing up to 70% of braking energy while enabling seamless "one-pedal" city driving.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Seamless One-Pedal Drive Mode</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Blended Electro-Hydraulic Braking</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Extended Friction Brake Lifespan (150k+ km)</li>
+            </ul>
+          </article>
+
+          <!-- Tech 4: Smart Vehicle Systems -->
+          <article class="article-card" id="tech-sdv">
+            <span class="tech-pill-badge">Connected Intelligence</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">Software-Defined OS</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Centralized zonal computing replaces dozens of fragmented ECUs with high-throughput neural compute processors. Enables Over-The-Air (OTA) firmware enhancements that upgrade range, acceleration, safety algorithms, and infotainment over time.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> High-Bandwidth Ethernet Zonal Gateway</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Continuous Cloud OTA Updates</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Predictive AI Diagnostics &amp; Health</li>
+            </ul>
+          </article>
+
+          <!-- Tech 5: Autonomous Driving -->
+          <article class="article-card" id="tech-autonomous">
+            <span class="tech-pill-badge">Perception &amp; AI</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-radar"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">Autonomous Driving</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Electric powertrains offer millisecond-precision torque vectoring, making them the optimal foundation for Level 3 and Level 4 autonomy. High-resolution LiDAR, HD 4D imaging radar, and multimodal vision models enable automated highway piloting and valet parking.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Solid-State Flash LiDAR &amp; 360° Cameras</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> End-to-End Neural Motion Planning</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Millisecond Drive-by-Wire Response</li>
+            </ul>
+          </article>
+
+          <!-- Tech 6: Vehicle-to-Grid (V2G) -->
+          <article class="article-card" id="tech-v2g">
+            <span class="tech-pill-badge">Bidirectional Grid</span>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="card-icon-wrapper !mb-0 !w-11 !h-11">
+                <i class="bi bi-arrow-left-right"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white font-heading">Vehicle-to-Grid (V2G)</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Transforms millions of parked EVs into decentralized grid-scale battery storage units. Bidirectional inverters allow vehicles to power homes during blackouts (V2H) or inject stored solar/wind power back into the public grid during peak demand hours.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 list-none p-0">
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> ISO 15118-20 Bidirectional Standard</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Virtual Power Plant (VPP) Monetization</li>
+              <li class="flex items-center gap-2"><i class="bi bi-chevron-right text-cyan-400"></i> Emergency Home Backup (V2H / V2L)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. ADVANTAGES & CHALLENGES (Two-Column Comparison Layout)
+         ========================================================================= -->
+    <section id="advantages" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="section-eyebrow">Balanced Analysis</span>
+          <h2 class="section-title">Advantages and Challenges</h2>
+          <p class="text-slate-400 text-lg">
+            An objective evaluation of electric vehicle strengths alongside current technological and infrastructural bottlenecks.
+          </p>
+        </div>
+
+        <div class="row g-5">
+          <!-- Advantages Column -->
+          <div class="col-12 col-lg-6">
+            <div class="dual-pane-advantage">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-bold">
+                  <i class="bi bi-check-lg text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white font-heading">Core Advantages</h3>
+                  <p class="text-xs text-emerald-300">Key strengths driving consumer adoption</p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="feature-list-item">
+                  <i class="bi bi-patch-check-fill icon-advantage"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Environmentally Friendly &amp; Zero Tailpipe Pollutants</strong>
+                    <p class="text-slate-300 text-sm mt-1">Eliminates smog, unburnt hydrocarbons, and local greenhouse gases in populated urban centers.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-patch-check-fill icon-advantage"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Significantly Lower Maintenance Costs</strong>
+                    <p class="text-slate-300 text-sm mt-1">No transmission fluids, timing belts, alternators, exhaust catalytic converters, or oil filters to maintain.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-patch-check-fill icon-advantage"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Whisper-Quiet Operation &amp; Instant Torque</strong>
+                    <p class="text-slate-300 text-sm mt-1">Maximum torque delivered from zero RPM with near-silent acoustics, drastically lowering city traffic noise pollution.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-patch-check-fill icon-advantage"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Rapidly Improving Driving Range</strong>
+                    <p class="text-slate-300 text-sm mt-1">Modern production EVs consistently achieve 450–650 km real-world highway range per charge.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-patch-check-fill icon-advantage"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">At-Home Overnight Refueling Convenience</strong>
+                    <p class="text-slate-300 text-sm mt-1">Plug in at night on off-peak electricity tariffs and start every morning with a fully charged battery.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Challenges Column -->
+          <div class="col-12 col-lg-6">
+            <div class="dual-pane-challenge">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-rose-400 font-bold">
+                  <i class="bi bi-exclamation-triangle-fill text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white font-heading">Key Challenges</h3>
+                  <p class="text-xs text-rose-300">Engineering &amp; systemic hurdles being solved</p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="feature-list-item">
+                  <i class="bi bi-x-circle-fill icon-challenge"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Charging Infrastructure Inequity &amp; Density</strong>
+                    <p class="text-slate-300 text-sm mt-1">Apartment dwellers and rural corridors face uneven public charger reliability and accessibility.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-x-circle-fill icon-challenge"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Upfront Battery Pack Costs</strong>
+                    <p class="text-slate-300 text-sm mt-1">Raw material volatility (lithium, nickel, cobalt) temporarily keeps purchase prices above budget gas cars.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-x-circle-fill icon-challenge"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Charging Dwell Times vs Liquid Fueling</strong>
+                    <p class="text-slate-300 text-sm mt-1">Standard DC fast charging requires 20–35 minutes, whereas gasoline fill-ups take only 3–5 minutes.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-x-circle-fill icon-challenge"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Battery Recycling &amp; Circular Supply Chain</strong>
+                    <p class="text-slate-300 text-sm mt-1">Scaling industrial hydrometallurgical recycling facilities is crucial to recover 95%+ of end-of-life metals.</p>
+                  </div>
+                </div>
+
+                <div class="feature-list-item">
+                  <i class="bi bi-x-circle-fill icon-challenge"></i>
+                  <div>
+                    <strong class="text-white block text-base font-semibold">Cold Weather Range Degradation</strong>
+                    <p class="text-slate-300 text-sm mt-1">Sub-zero temperatures reduce electrolyte ion mobility and cabin heating efficiency by 15–25%.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytical Summary Box -->
+        <div class="mt-8 p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center gap-3">
+          <i class="bi bi-info-circle-fill text-cyan-400 text-xl flex-shrink-0"></i>
+          <p class="text-sm text-slate-300 mb-0">
+            <span class="text-white font-semibold">Industry Consensus:</span> Next-generation solid-state electrolytes and 800V silicon-carbide megawatt charging are projected to eliminate over 80% of these remaining challenges before 2030.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. THE FUTURE OF EVS (5 to 15-Year Horizon Breakdown)
+         ========================================================================= -->
+    <section id="future" class="py-16 md:py-24 bg-slate-950/60 border-t border-slate-800/80">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="section-eyebrow">Roadmap 2026–2040</span>
+          <h2 class="section-title">The Future of Electric Vehicles (5–15 Years)</h2>
+          <p class="text-slate-400 text-lg">
+            Where next-generation research and development will propel commercial electric transportation over the coming decade.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Trend 1: Longer-Lasting Solid-State Batteries -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-cyan-400 mb-2">01 // ENERGY STORAGE</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Solid-State &amp; 1000km+ Range</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Commercial solid-state cells will offer 500 Wh/kg specific energy, enabling passenger sedans and heavy pickups to comfortably travel over 1,000 km on a single charge with zero degradation over 20 years.
+              </p>
+            </article>
+          </div>
+
+          <!-- Trend 2: Faster Sub-10 Min Charging -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-emerald-400 mb-2">02 // GRID INFRASTRUCTURE</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Megawatt Fast Charging</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Megawatt Charging Systems (MCS) delivering 1 MW+ power will charge passenger EVs in 7–10 minutes and long-haul electric semi-trucks in 30 minutes during mandatory driver rest breaks.
+              </p>
+            </article>
+          </div>
+
+          <!-- Trend 3: Price Parity -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-sky-400 mb-2">03 // ECONOMICS</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Complete Price Parity</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                As battery pack costs drop below $60/kWh through gigacasting and sodium-ion cells, mass-market EVs will cost less to manufacture and buy upfront than comparable internal combustion cars.
+              </p>
+            </article>
+          </div>
+
+          <!-- Trend 4: Wireless Inductive Charging -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-cyan-400 mb-2">04 // WIRELESS POWER</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Wireless Dynamic Roadways</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Inductive magnetic resonance pads embedded in highway lanes and garage floors will charge vehicles wirelessly while driving and parking, eliminating physical charging cables entirely.
+              </p>
+            </article>
+          </div>
+
+          <!-- Trend 5: Autonomous Electric Fleets -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-emerald-400 mb-2">05 // AUTONOMOUS MOBILITY</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">Autonomous Robotaxis</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Dedicated driverless electric robotaxis operating 24/7 on demand will slash urban mobility costs by 80%, transforming personal car ownership into an affordable, high-efficiency public service.
+              </p>
+            </article>
+          </div>
+
+          <!-- Trend 6: Renewable Grid Synergy -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="article-card">
+              <div class="text-xs font-mono text-sky-400 mb-2">06 // CIRCULAR SUSTAINABILITY</div>
+              <h3 class="text-xl font-bold text-white mb-2 font-heading">100% Circular Ecosystem</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Closed-loop hydrometallurgical recycling will recover 98% of battery metals, creating a self-sustaining manufacturing loop powered entirely by rooftop solar and regional wind microgrids.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. FUTURE STATISTICS & BENCHMARK HIGHLIGHTS
+         ========================================================================= -->
+    <section class="py-16 md:py-24 border-t border-slate-800/80">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="section-eyebrow">Projected Metrics &amp; Benchmarks</span>
+          <h2 class="section-title">Future Statistics &amp; Milestones</h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            *Illustrative benchmarks synthesized from global clean energy agency roadmaps and automotive manufacturing forecasts.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Stat 1 -->
+          <div class="col-6 col-lg-3">
+            <div class="stat-card" id="stat-adoption">
+              <div class="stat-number">50%+</div>
+              <div class="stat-label">Global EV Sales Share</div>
+              <div class="stat-caption">Projected worldwide market share milestone targeted by 2030–2035</div>
+            </div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="col-6 col-lg-3">
+            <div class="stat-card" id="stat-range">
+              <div class="stat-number">800+</div>
+              <div class="stat-label">km Driving Range</div>
+              <div class="stat-caption">Projected mass-market real-world solid-state pack capability</div>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="col-6 col-lg-3">
+            <div class="stat-card" id="stat-charging-time">
+              <div class="stat-number">10–15</div>
+              <div class="stat-label">Min 10%–80% Fast Charge</div>
+              <div class="stat-caption">Target duration at standard 400kW+ Megawatt DC charging terminals</div>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="col-6 col-lg-3">
+            <div class="stat-card" id="stat-emissions">
+              <div class="stat-number">Zero</div>
+              <div class="stat-label">Tailpipe Carbon Emissions</div>
+              <div class="stat-caption">Direct operating greenhouse gas emissions from electrified fleets</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Methodology Footnote -->
+        <div class="text-center mt-6">
+          <span class="text-xs text-slate-500 font-mono">
+            Note: Statistics represent synthesized industry research targets and illustrative global forecasts.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. TIMELINE SECTION (The EV Evolution from Past to Future)
+         ========================================================================= -->
+    <section id="timeline" class="py-16 md:py-24 bg-slate-950/60 border-t border-slate-800/80">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="section-eyebrow">Chronological Trajectory</span>
+          <h2 class="section-title">The Evolution of Electric Transportation</h2>
+          <p class="text-slate-400 text-lg">
+            From 19th-century battery pioneers to fully integrated autonomous clean transit systems.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="row g-4">
+            <!-- Era 1 -->
+            <div class="col-12 col-lg timeline-step">
+              <div class="timeline-node">1890</div>
+              <div class="timeline-content-mobile">
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <div class="text-xs font-mono text-slate-400 uppercase">Era 01</div>
+                  <h4 class="text-lg font-bold text-white font-heading mt-1 mb-2">Early Pioneers</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    Lead-acid and nickel-iron electric carriages outsell gasoline cars in major cities before cheap petroleum and electric starters favor ICEs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Era 2 -->
+            <div class="col-12 col-lg timeline-step">
+              <div class="timeline-node">2008</div>
+              <div class="timeline-content-mobile">
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <div class="text-xs font-mono text-cyan-400 uppercase">Era 02</div>
+                  <h4 class="text-lg font-bold text-white font-heading mt-1 mb-2">Modern EV Awakening</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    Commercialization of automotive Lithium-ion battery packs proves high-performance, long-range pure electric sports sedans are viable.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Era 3 -->
+            <div class="col-12 col-lg timeline-step">
+              <div class="timeline-node">2020</div>
+              <div class="timeline-content-mobile">
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <div class="text-xs font-mono text-emerald-400 uppercase">Era 03</div>
+                  <h4 class="text-lg font-bold text-white font-heading mt-1 mb-2">Mass Expansion</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    Gigafactories scale globally, 800V charging architectures emerge, and global automakers pivot entire lineups toward pure electrification.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Era 4 -->
+            <div class="col-12 col-lg timeline-step">
+              <div class="timeline-node">2028</div>
+              <div class="timeline-content-mobile">
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <div class="text-xs font-mono text-cyan-400 uppercase">Era 04</div>
+                  <h4 class="text-lg font-bold text-white font-heading mt-1 mb-2">Solid-State &amp; AI</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    Solid-state batteries reach volume production, sub-$25k EVs reach price parity, and level 4 autonomous robotaxis scale in metropolitan hubs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Era 5 -->
+            <div class="col-12 col-lg timeline-step">
+              <div class="timeline-node">2035+</div>
+              <div class="timeline-content-mobile">
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <div class="text-xs font-mono text-emerald-400 uppercase">Era 05</div>
+                  <h4 class="text-lg font-bold text-white font-heading mt-1 mb-2">Integrated Grid Era</h4>
+                  <p class="text-xs text-slate-300 leading-relaxed">
+                    Complete zero-emission mandates take effect worldwide with wireless dynamic charging lanes and 100% circular battery recycling loops.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CALL-TO-ACTION (The Road Ahead Is Electric)
+         ========================================================================= -->
+    <section id="cta" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="cta-banner text-center max-w-4xl mx-auto">
+          <!-- Futuristic Glow Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-xs font-mono uppercase tracking-widest mb-6">
+            <i class="bi bi-battery-charging text-emerald-400"></i> The Clean Mobility Transition
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading mb-4 tracking-tight">
+            The Road Ahead Is Electric
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            The transition to electric vehicles represents far more than swapping powertrains; it is a fundamental reimagining of urban air quality, energy resilience, and connected digital intelligence. Step into the future today.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#technology" class="btn-futuristic-primary text-base py-3 px-6">
+              <span>Learn More About EV Tech</span>
+              <i class="bi bi-arrow-right-circle-fill"></i>
+            </a>
+            <a href="#home" class="btn-futuristic-secondary text-base py-3 px-6">
+              <i class="bi bi-arrow-up-circle"></i>
+              <span>Back to Top</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       11. FOOTER (Branding, Navigation, Socials & Legal)
+       ========================================================================= -->
+  <footer class="footer-section pt-16 pb-12">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="row g-5 mb-12">
+        <!-- Footer Column 1: Brand & Mission -->
+        <div class="col-12 col-lg-5">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center text-slate-950 font-bold text-base">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <span class="text-xl font-bold font-heading text-white tracking-tight">
+              EV <span class="nav-brand-logo">Future</span>
+            </span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
+            An independent editorial publication chronicling the technological, economic, and environmental revolutions redefining electric vehicles and global zero-carbon mobility.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#home" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 flex items-center justify-center transition" aria-label="EV Future Twitter/X">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#home" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 flex items-center justify-center transition" aria-label="EV Future LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#home" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 flex items-center justify-center transition" aria-label="EV Future YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="#home" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 flex items-center justify-center transition" aria-label="EV Future GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Column 2: Article Sections -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="text-white text-sm font-semibold uppercase tracking-wider mb-4 font-heading">Explore Article</h4>
+          <ul class="space-y-2.5 text-sm list-none p-0">
+            <li><a href="#home" class="footer-link">Home &amp; Hero</a></li>
+            <li><a href="#intro" class="footer-link">Introduction</a></li>
+            <li><a href="#benefits" class="footer-link">Why EVs Matter</a></li>
+            <li><a href="#technology" class="footer-link">EV Technology</a></li>
+            <li><a href="#advantages" class="footer-link">Pros &amp; Cons</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Roadmap & Insights -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="text-white text-sm font-semibold uppercase tracking-wider mb-4 font-heading">Deep Dives</h4>
+          <ul class="space-y-2.5 text-sm list-none p-0">
+            <li><a href="#future" class="footer-link">Future Outlook (5-15 Yrs)</a></li>
+            <li><a href="#timeline" class="footer-link">Chronology &amp; Timeline</a></li>
+            <li><a href="#technology" class="footer-link">Solid-State Tech</a></li>
+            <li><a href="#technology" class="footer-link">Vehicle-to-Grid</a></li>
+            <li><a href="#cta" class="footer-link">The Road Ahead</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 4: Newsletter & Publication Details -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h4 class="text-white text-sm font-semibold uppercase tracking-wider mb-4 font-heading">Clean Mobility Digest</h4>
+          <p class="text-xs text-slate-400 mb-3">
+            Synthesizing weekly breakthroughs in battery chemistry, energy storage, and clean transport policy.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+            <i class="bi bi-journal-bookmark-fill text-cyan-400 me-1"></i> Special Edition • Vol. 14, Issue 2
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Legal Sub-Footer -->
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          &copy; 2026 EV Future Publication. All rights reserved.This page was created by Anbu codeZ-21
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#home" class="text-slate-500 hover:text-slate-300 text-decoration-none">Privacy Policy</a>
+          <a href="#home" class="text-slate-500 hover:text-slate-300 text-decoration-none">Terms of Service</a>
+          <a href="#home" class="text-slate-500 hover:text-slate-300 text-decoration-none">Editorial Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
