@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: auto;
+    background: rgb(28, 28, 59);
+    color: wheat;
+     
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+.head{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-top: 1px solid red;
+    border-left: 1px solid purple;
+    border-right: 1px solid green;
+    border-bottom: 1px solid orange;
+}
+.title{
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+    border-radius: 100px;
+    margin-left: 30px;
+   
+}
+.title > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 500px;
+    
+    
+}
+.navbar > nav {
+     display: flex;
+     align-items: center;
+     gap: 100px;
+     padding: 20px;
+     font-size: 20px;
+     margin-right: 30px;
+    
+     
+}
+.banner > img{
+    width: 1200px;
+    height: 500px;
+    padding: 20px;
+    margin: 30px;
+     border-radius: 100px;
+     
+}
+.one{
+    padding: 20px;
+    margin: 10px;
+    font-weight: 500;
+    border: 2px solid black;
+    box-shadow: 0px 0px 4px 4px rgba(194, 156, 156, 0.993) ;
+}
+.one > h3{
+    padding-bottom: 30px;
+    padding-top: 20px
+}
+.one > p{
+    margin-left:40px ;
+    margin-right: 20px;
+}
+.allcards{
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.card{
+    
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    text-align: start;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 0px 0px 4px 4px rgba(194, 156, 156, 0.993) ;
+    row-gap: 40px;
+  
+   
+}
+
+
+
+.card > p{
+    line-height: 1.4;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+.contact > h2{
+    padding-bottom: 30px;
+}
+.contact > form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid green;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px green;
+    
+}
+.contact > form > input{
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    border: rgb(209, 203, 203) solid 1px;
+    
+}
+.contact > form >textarea{
+    width: 400px;
+    height: 170px;
+    border-radius: 10px;
+    text-align: center;
+    border: rgb(209, 203, 203) solid 1px;
+
+}
+.contact > form > button{
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    width: 300px;
+    padding: 20px;
+    
+   
+}
+.about >h2 {
+    text-align: center;
+    padding: 20px;
+}
+.about{
+    padding: 20px;
+    line-height: 1.4;
+    margin-left: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 4px 4px rgba(194, 156, 156, 0.993) ;
+}
+
+.foot{
+    background-color: rgb(219, 180, 180);
+    color: black;
+    text-align: center;
+
+}
+a:hover{
+    background-color:transparent;
+    color: blue;
+   box-shadow: 0px 0px 5px 2px yellow;
+}

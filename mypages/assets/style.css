@@ -1,185 +1,301 @@
-*{
+/* =========================
+   RESET
+========================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-html{
-    scroll-behavior: smooth;
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #3b0764, transparent 35%),
+        radial-gradient(circle at bottom right, #0f766e, transparent 35%),
+        #09090f;
+    color: #ffffff;
 }
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: auto;
-    
-}
-a{
-    text-decoration: none;
-    
-    
-}
-/* Project Section */
+
+/* =========================
+   MAIN SECTION
+========================= */
 .project {
     min-height: 100vh;
-    padding: 80px 20px;
+    padding: 80px 8%;
     text-align: center;
-   background-color:#0f172a;
-    
-    
 }
 
-/* Main Heading */
-.project h1 {
-    font-size: 45px;
-    color:#38bdf8;
-    margin-bottom: 15px;
-}
-
-/* Description */
-.project > p {
-    font-size: 18px;
-    color: #cbd5e1;
-    line-height: 1.6;
-    margin-bottom: 45px;
-}
-
-.badge{
+/* =========================
+   BADGE
+========================= */
+.badge {
     display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid #ffffff20;
-    border-radius: 50px;
-    background: #ffffff0d;
-    backdrop-filter: blur(15px);
-    color: #bbaaff;
-    font-size: 13px;
+    padding: 10px 22px;
     margin-bottom: 20px;
-}
-.card{
-    display: flex;
-    flex-direction: row;
-    width: 600px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    color: #a78bfa;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Cards */
-.one,
-.two ,
-.three,
-.four{
-    
-    flex: 0 0 50%;
-    width: 300px;
-    min-height: 200px;
-    margin: 15px;
-    padding: 30px;
-    vertical-align: top;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    transition: 0.3s ease;
-}
-
-/* Card Hover Effect */
-.one:hover,
-.two:hover,
-.three:hover,
-.four:hover{
-    transform: translatey(-20px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-}
-
-/* HTML Card */
-.one {
-    border-top: 6px solid #e34c26;
-}
-
-.one h2 {
-    color: #e34c26;
-}
-
-/* CSS Card */
-.two {
-    border-top: 6px solid #264de4;
-}
-
-.two h2 {
-    color: #264de4;
-}
-/* bootstrap card */
-  .three{
-    border-top: 6px solid green;
-}
-.three h2{
-    color: green;
-}
-/* tailwindcard */
-.four{
-    border-top:6px solid purple;
-}
-.four h2{
-    color: purple;
-}
-
-/* Card Headings */
-.one h2,
-.two h2,
-.three h2,
-.four h2 {
-    font-size: 30px;
+/* =========================
+   HEADING
+========================= */
+.project h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    font-weight: 800;
     margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #818cf8,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Card Paragraph */
-.one p,
-.two p ,
-.three p,
-.four p{
-    color: #555;
-    font-size: 16px;
+.project > p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 55px;
+}
+
+/* =========================
+   CARD CONTAINER
+========================= */
+.card {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* =========================
+   ALL PROJECT CARDS
+========================= */
+.card > div {
+    position: relative;
+    padding: 35px 25px;
+
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Gradient glow */
+.card > div::before {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    top: -70px;
+    right: -70px;
+
+    background: #8b5cf6;
+    filter: blur(50px);
+
+    opacity: 0.5;
+}
+
+/* Hover effect */
+.card > div:hover {
+    transform: translateY(-12px);
+
+    border-color: rgba(167, 139, 250, 0.6);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+/* =========================
+   CARD HEADINGS
+========================= */
+.card h2 {
+    position: relative;
+    z-index: 1;
+
+    font-size: 27px;
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+.card p {
+    position: relative;
+    z-index: 1;
+
+    color: #cbd5e1;
+    font-size: 15px;
     margin-bottom: 25px;
 }
 
-/* Buttons */
-.one a,
-.two a,
-.three a,
-.four a {
+/* =========================
+   BUTTONS
+========================= */
+.card a {
+    position: relative;
+    z-index: 1;
+
     display: inline-block;
-    padding: 12px 28px;
-    color: white;
+
+    padding: 11px 24px;
+
+    border-radius: 50px;
+
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #4f46e5
+    );
+
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+
+    transition: all 0.3s ease;
 }
 
-/* HTML Button */
+.card a:hover {
+    transform: scale(1.08);
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #06b6d4
+    );
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.5);
+}
+
+/* =========================
+   CARD COLORS
+========================= */
+
+/* HTML */
+.one::before {
+    background: #f97316 !important;
+}
+
 .one a {
-    background-color: #e34c26;
+    background: linear-gradient(135deg, #f97316, #ef4444);
 }
 
-.one a:hover {
-    background-color: #b93617;
+/* CSS */
+.two::before {
+    background: #3b82f6 !important;
 }
 
-/* CSS Button */
 .two a {
-    background-color: #264de4;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
 }
 
-.two a:hover {
-    background-color: #1b36a8;
-}
-/* bootstrap button */
-.three a{
-    background-color: green;
-}
-.three a:hover{
-    background-color: rgb(10, 163, 10);
-}
-/* tailwind button */
-.four a{
-    background-color: purple;
-}
-.four a:hover{
-    background-color: rgb(218, 77, 218);
+/* Bootstrap */
+.three::before {
+    background: #9333ea !important;
 }
 
+.three a {
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+}
+
+/* Tailwind */
+.four::before {
+    background: #06b6d4 !important;
+}
+
+.four a {
+    background: linear-gradient(135deg, #0891b2, #14b8a6);
+}
+
+/* Projects */
+.five::before {
+    background: #22c55e !important;
+}
+
+.five a {
+    background: linear-gradient(135deg, #16a34a, #14b8a6);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .project {
+        padding: 60px 5%;
+    }
+
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .project {
+        padding: 50px 20px;
+    }
+
+    .project h1 {
+        font-size: 45px;
+    }
+
+    .project > p {
+        font-size: 15px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card > div {
+        min-height: 220px;
+    }
+}
