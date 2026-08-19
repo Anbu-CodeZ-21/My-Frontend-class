@@ -1,0 +1,125 @@
+var
+
+var username
+var firstName
+var lastName
+var userEmail
+var phoneNumber
+var HomeAddress
+var studentName
+var studentId
+var courseName
+var collegeName
+var collegeTime
+var companyName
+var idNumber
+var jobTittle
+var accountNumber
+var bankName
+var totalAmount
+var productName
+var productCount
+var productId
+var productPrice
+var orderNumber
+var orderDate
+var customerName
+var customerId
+var itemName
+var itemPrice
+var itemQuantity
+var carValue 
+var loginForm
+var passwordValue
+var websiteName
+var websiteTittle
+var pageTittle
+var pageContent
+var backGround
+var backgroundColor
+var textColor
+var fontSize
+var buttonSize
+
+
+let
+
+
+let buttonColor
+let screenWidth
+let screenWidth
+let currentDate
+let startTime
+let watchTime
+let totalMarks
+let smallScreen
+let bigScreen
+let blackPen
+let bluePen
+let bigScreen
+let whiteColor
+let blackColor
+let comeIn
+let getOut
+let comeOutside
+let busTravel
+let bikeRide
+let carRace
+let timeTravel
+let hairOil
+let earRing
+let shirtColor
+let buttonWidth
+let headLine
+let saravaStore
+let movingCar
+let microWave
+let tallRoof
+let handBag
+let laptopBag
+let idCard
+let mobilePhone
+let washingPowder
+
+
+const
+
+
+
+const airBuds
+const ruledNote
+const unruledNote
+const typeWritter
+const pencilBox
+const webDevelopment
+const webCoder
+const roughPaper
+const photoFrame
+const dressCode
+const classMate
+const signalLight
+const trafficPolice
+const busPass
+const busDriver
+const bigBasket
+const onlineShopping
+const skywave
+const darkMan
+const basketBall
+const tennisBat
+const cricketBat
+const cricketBall
+const roadRoller
+const onlineShopping
+const washRoom
+const livingRoom
+const goodBye
+const watterBottle
+const riceBall
+const chargingCable
+const mobileApp
+const bikeRace
+
+
+
+
