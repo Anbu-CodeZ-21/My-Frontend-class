@@ -1,8 +1,8 @@
 let word = "javascript";
 let target = "s";
 
-for (let i = 0; i < word.length; i++) {
-  if (word[i] === target) {
+for (let a = 0; a < word.length; a++) {
+  if (word[a] === target) {
     console.log('Character Found:', target);
     break;
   }

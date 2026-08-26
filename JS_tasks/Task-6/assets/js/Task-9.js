@@ -1,8 +1,8 @@
 let text = "javascript";
 let reversed = "";
 
-for (let i = text.length - 1; i >= 0; i--) {
-  reversed += text[i];
+for (let a = text.length - 1; a >= 0; a--) {
+  reversed += text[a];
 }
 
 console.log(reversed);
