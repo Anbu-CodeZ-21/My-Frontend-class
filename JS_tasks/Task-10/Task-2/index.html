@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Logical 10</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>JavaScript 10 Logical </h1>
+        <p>10 Logical Programs with Output</p>
+      </header>
+
+      <div class="grid">
+        <!-- 1. Even or Odd -->
+        <div class="card">
+          <h2>1. Even or Odd</h2>
+          <p>Check whether a number is even or odd.</p>
+          <div class="pro">
+            let num1 = 25;<br />
+
+            if (num1 % 2 === 0) {<br />
+            console.log(num1 + " is an Even Number");<br />
+            } else {<br />
+            console.log(num1 + " is an Odd Number");<br />
+            }<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+          <div class="result">25 is an Odd Number</div>
+        </div>
+
+        <!-- 2. Largest Number -->
+        <div class="card">
+          <h2>2. Largest Number</h2>
+          <p>Find the largest among three numbers.</p>
+          <div class="pro">
+            let a = 25;<br />
+            let b = 45;<br />
+            let c = 35;<br />
+
+            let largest = Math.max(a, b, c);<br />
+
+            console.log("Numbers: " + a + ", " + b + ", " + c);<br />
+            console.log("Largest = " + largest);<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+          <div class="result">
+            Numbers: 25, 45, 35 <br />
+            Largest = 45
+          </div>
+        </div>
+
+        <!-- 3. Prime Number -->
+        <div class="card">
+          <h2>3. Prime Number</h2>
+          <p>Check whether a number is prime.</p>
+          <div class="pro">
+            let num3 = 17;<br />
+            let isPrime = true;<br />
+
+            if (num3 < 2) {<br />
+            isPrime = false;<br />
+            }<br />
+
+            for (let i = 2; i <= Math.sqrt(num3); i++) {<br />
+            if (num3 % i === 0) {<br />
+            isPrime = false;<br />
+            break;<br />
+            }<br />
+            }<br />
+
+            if (isPrime) {<br />
+            console.log(num3 + " is a Prime Number");<br />
+            } else {<br />
+            console.log(num3 + " is Not a Prime Number");<br />
+            }<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">17 is a Prime Number</div>
+        </div>
+
+        <!-- 4. Factorial -->
+        <div class="card">
+          <h2>4. Factorial</h2>
+          <p>Calculate the factorial of a number.</p>
+          <div class="pro">
+            let num4 = 5;<br />
+            let factorial = 1;<br />
+
+            for (let i = 1; i <= num4; i++) {<br />
+            factorial = factorial * i;<br />
+            }<br />
+
+            console.log("Factorial of " + num4 + " = " + factorial);<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">Factorial of 5 = 120</div>
+        </div>
+
+        <!-- 5. Fibonacci -->
+        <div class="card">
+          <h2>5. Fibonacci Series</h2>
+          <p>Generate the Fibonacci series.</p>
+          <div class="pro">
+            let n = 8;<br />
+            let first = 0;<br />
+            let second = 1;<br />
+            let fibonacci = [];<br />
+
+            for (let i = 0; i < n; i++) {<br />
+            fibonacci.push(first);<br />
+
+            let next = first + second;<br />
+            first = second;<br />
+            second = next;<br />
+            }<br />
+
+            console.log("Fibonacci Series: " + fibonacci.join(" , "));<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">
+            Fibonacci Series: 0 , 1 , 1 , 2 , 3 , 5 , 8 , 13
+          </div>
+        </div>
+
+        <!-- 6. Palindrome -->
+        <div class="card">
+          <h2>6. Palindrome</h2>
+          <p>Check whether a number is a palindrome.</p>
+          <div class="pro">
+            let num6 = 121;<br />
+            let original = num6;<br />
+            let reversed6 = 0;<br />
+
+            while (num6 > 0) {<br />
+            let digit = num6 % 10;<br />
+            reversed6 = reversed6 * 10 + digit;<br />
+            num6 = Math.floor(num6 / 10);<br />
+            }<br />
+
+            if (original === reversed6) {<br />
+            console.log(original + " is a Palindrome");<br />
+            } else {<br />
+            console.log(original + " is Not a Palindrome");<br />
+            }<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">121 is a Palindrome</div>
+        </div>
+
+        <!-- 7. Reverse Number -->
+        <div class="card">
+          <h2>7. Reverse Number</h2>
+          <p>Reverse a given number.</p>
+          <div class="pro">
+            let num7 = 12345;<br />
+            let temp = num7;<br />
+            let reversed7 = 0;<br />
+
+            while (temp > 0) {<br />
+            let digit = temp % 10;<br />
+            reversed7 = reversed7 * 10 + digit;<br />
+            temp = Math.floor(temp / 10);<br />
+            }<br />
+
+            console.log("Reverse of " + num7 + " = " + reversed7);<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">Reverse of 12345 = 54321</div>
+        </div>
+
+        <!-- 8. Sum of Digits -->
+        <div class="card">
+          <h2>8. Sum of Digits</h2>
+          <p>Calculate the sum of digits.</p>
+          <div class="pro">
+            let num8 = 12345;<br />
+            let temp8 = num8;<br />
+            let sum = 0;<br />
+
+            while (temp8 > 0) {<br />
+            sum = sum + (temp8 % 10);<br />
+            temp8 = Math.floor(temp8 / 10);<br />
+            }<br />
+
+            console.log("Sum of digits of " + num8 + " = " + sum);<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">Sum of digits of 12345 = 15</div>
+        </div>
+
+        <!-- 9. Armstrong Number -->
+        <div class="card">
+          <h2>9. Armstrong Number</h2>
+          <p>Check whether a number is an Armstrong number.</p>
+          <div class="pro">
+            let num9 = 153;<br />
+            let original9 = num9;<br />
+            let digits = String(num9).length;<br />
+            let temp9 = num9;<br />
+            let armstrongSum = 0;<br />
+
+            while (temp9 > 0) {<br />
+            let digit = temp9 % 10;<br />
+            armstrongSum = armstrongSum + Math.pow(digit, digits);<br />
+            temp9 = Math.floor(temp9 / 10);<br />
+            }<br />
+
+            if (armstrongSum === original9) {<br />
+            console.log(original9 + " is an Armstrong Number");<br />
+            } else {<br />
+            console.log(original9 + " is Not an Armstrong Number");<br />
+            }<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">153 is an Armstrong Number</div>
+        </div>
+
+        <!-- 10. Leap Year -->
+        <div class="card">
+          <h2>10. Leap Year</h2>
+          <p>Check whether a year is a leap year.</p>
+          <div class="pro">
+            let year = 2024;<br />
+
+            let leap = (year % 400 === 0) ||<br />
+            (year % 4 === 0 && year % 100 !== 0);<br />
+
+            if (leap) {<br />
+            console.log(year + " is a Leap Year");<br />
+            } else {<br />
+            console.log(year + " is Not a Leap Year");<br />
+            }<br />
+          </div>
+          <div class="output">OUTPUT :</div>
+
+          <div class="result">2024 is a Leap Year</div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Anbu codeZ-21</p>
+      </footer>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
