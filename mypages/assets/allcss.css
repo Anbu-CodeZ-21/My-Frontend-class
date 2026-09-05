@@ -1,145 +1,287 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background-color: #E0F2FE;
-    color: #0F172A;
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    color: white;
+    padding-bottom: 50px;
 }
 
-/* Header */
+
+/* =========================
+   HEADER
+========================= */
+
 .head {
-    background-color: #0F172A;
-    padding: 25px 20px;
-    margin-bottom: 30px;
     text-align: center;
+    padding: 55px 20px 35px;
 }
 
-.head > h1 {
-    color: #F97316;
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-/* Badge */
 .badge {
     display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid #ffffff20;
-    border-radius: 50px;
-    background: #ffffff0d;
-    backdrop-filter: blur(15px);
-    color: #bbaaff;
-    font-size: 13px;
-    margin-bottom: 20px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    margin-bottom: 18px;
 }
 
-/* Normal links */
-a {
+.head h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   HOME BUTTON
+========================= */
+
+.card {
+    width: fit-content;
+    margin: 0 auto 40px;
+}
+
+.card a {
     display: inline-block;
     text-decoration: none;
-    background-color: white;
-    padding: 10px 15px;
-    margin: 5px;
-    text-align: center;
-    color: blue;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-a:hover {
-    background-color: lightskyblue;
-    color: #0F172A;
-}
-
-/* Card link */
-.card > a {
-    background-color: cyan;
-    border: 1px solid black;
-    box-shadow: 0 0 5px 2px rgb(115, 115, 230);
-}
-
-/* Parent container */
-.parent {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Child card */
-.child {
-    display: flex;
-    flex-direction: column;
-
-    width: 300px;
-    min-height: 200px;
-
-    padding: 20px;
-    margin: 10px;
-
-    border: 1px solid #38BDF8;
-    box-shadow: 0 0 5px 2px rgb(209, 196, 196);
-    border-radius: 20px;
-
-    background-color: #BFDBFE;
-
-    transition: 0.3s;
-}
-
-/* Card hover effect */
-.child:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Child heading */
-.child > h2 {
-    margin-bottom: 20px;
-    padding: 10px;
-
-    background-color: #103CA3;
     color: white;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+    transition: 0.3s ease;
+}
+
+.card a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(106, 46, 218, 0.6);
+}
+
+
+/* =========================
+   TASK GRID
+========================= */
+
+.parent {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   DAY CARDS
+========================= */
+
+.child {
+    position: relative;
+    padding: 28px 25px;
+    border-radius: 22px;
+
+    background: rgba(117, 3, 128, 0.164);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.35s ease;
+
+    overflow: hidden;
+}
+
+.child::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #6366f1;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    top: -40px;
+    right: -40px;
+}
+
+.child:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   DAY TITLE
+========================= */
+
+.child h2 {
+    position: relative;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.child h2::after {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 4px;
+
+    margin-top: 8px;
 
     border-radius: 10px;
-    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #a78bfa
+    );
 }
 
-/* Paragraph inside child */
-.child > p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+
+/* =========================
+   TASK LINKS
+========================= */
+
+.child a {
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #e2e8f0;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    padding: 11px 15px;
+
+    margin: 10px 0;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
+.child a::before {
+    content: "✓";
 
-    .head > h1 {
-        font-size: 28px;
-    }
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #8b5cf6
+    );
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.child a:hover {
+    color: white;
+
+    transform: translateX(7px);
+
+    background: linear-gradient(
+        90deg,
+        rgba(99, 102, 241, 0.5),
+        rgba(139, 92, 246, 0.3)
+    );
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
 
     .parent {
-        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .head h1 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .parent {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .head {
+        padding-top: 35px;
+    }
+
+    .head h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 8px 15px;
     }
 
     .child {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    a {
-        padding: 8px 12px;
+        padding: 24px 20px;
     }
 }
