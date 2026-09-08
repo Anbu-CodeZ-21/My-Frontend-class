@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+.product{
+    background-color:black;
+    padding: 20px;
+}
+h1{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    display: inline-block;
+    background-color: white;
+    border: 2px solid gold;
+    padding: 20px;
+    margin: 30px;
+    
+}
+.card:hover{
+    background-color: rgb(183, 236, 236);
+}
+h2{
+    color: red;
+}
+p{
+    color: blue;
+    padding: 5px;
+}
+.card > img{
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    margin: 2px;
+    
+    border-radius: 2px;
+    background-color: black;
+   
+    
+}
