@@ -6,7 +6,7 @@ let ageInput = document.getElementById("age");
 let cityInput = document.getElementById("city");
 let data = document.getElementById("data");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit",  (event)=> {
     event.preventDefault();
 
     let student = {
