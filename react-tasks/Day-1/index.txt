@@ -1,0 +1,123 @@
+1. What is React?
+
+React is a JavaScript library used to build user interfaces (UI), especially for web applications.
+
+Developed by Meta (Facebook)
+Uses reusable components
+Makes dynamic websites easier to build
+Commonly used for Single Page Applications (SPA)
+
+Example: Facebook, Instagram, Netflix and many modern web applications use React.
+
+2. Is React a library or framework?
+
+React is a JavaScript library, not a full framework.
+
+React mainly focuses on the UI layer.
+
+React Library	Framework
+Mainly handles UI	Provides a complete application structure
+More flexible	More built-in features
+You choose additional tools	Many tools are already included
+
+Answer for interview:
+
+React is an open-source JavaScript library developed by Meta for building user interfaces.
+
+3. What is a Component?
+
+A component is a small, reusable part of a React application.
+
+For example, a website can have:
+
+Website
+│
+├── Navbar
+├── Header
+├── ProductCard
+├── LoginForm
+└── Footer
+
+Each part can be created as a separate component.
+
+Example:
+
+function Welcome() {
+    return <h1>Hello React</h1>;
+}
+
+Here, Welcome is a component.
+
+4. Why are Components important?
+
+Components are important because they make applications:
+
+Reusable
+Easy to maintain
+Easy to understand
+Easy to test
+Organized
+
+For example, instead of writing the same product card 10 times, we can create one ProductCard component and reuse it.
+
+<ProductCard />
+<ProductCard />
+<ProductCard />
+5. What is JSX?
+
+JSX (JavaScript XML) is a syntax that allows us to write HTML-like code inside JavaScript.
+
+Example:
+
+const element = <h1>Hello React</h1>;
+
+JSX makes React code easier to read and write.
+
+Important: JSX is not exactly HTML. It is converted into JavaScript by tools such as Babel.
+
+6. What is Virtual DOM?
+
+The Virtual DOM is a lightweight JavaScript representation of the Real DOM.
+
+React uses it to determine what parts of the UI need to change.
+
+Example:
+
+Virtual DOM
+     ↓
+Compare changes
+     ↓
+Update only necessary parts
+     ↓
+Real DOM
+
+This helps React update the UI efficiently.
+
+7. What is the Real DOM?
+
+The Real DOM (Document Object Model) is the actual structure of a web page maintained by the browser.
+
+Example HTML:
+
+<h1>Hello</h1>
+<button>Click</button>
+
+The browser creates DOM elements for these HTML elements.
+
+When the DOM changes, the browser may need to perform operations such as recalculating layout and repainting parts of the page.
+
+8. What is Reconciliation?
+
+Reconciliation is the process React uses to compare the previous Virtual DOM with the new Virtual DOM and determine what needs to be updated in the Real DOM.
+
+Example:
+
+Before:
+
+<h1>Hello</h1>
+
+After:
+
+<h1>Welcome</h1>
+
+React compares the old and new UI representations and updates the necessary DOM content.
