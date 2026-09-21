@@ -1,6 +1,7 @@
 const Home =()=>{
     return(
         <>
+        
         <div >
             <h2 className=" bg-red-400 font-bold p-4">Home</h2>
             <p className=" bg-green-400 font-bold p-4">
