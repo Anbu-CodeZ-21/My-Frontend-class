@@ -12,7 +12,12 @@ const course=["HTML","REACT","CSS","JAVA SCRIPT","TAILWINDCSS"]
     {
 
       course.map((e,i)=>(
-         <p className=" bg-red-600 text-white p-3 m-3" key={i}>{e}</p>
+         <p className=" bg-red-600 text-white p-3 m-3" key={i}>
+
+
+          {e}
+          
+          </p>
       ))
     }
   </div>

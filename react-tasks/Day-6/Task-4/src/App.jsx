@@ -10,7 +10,7 @@ const App = () => {
   }
   return (
     <>
-    <Employee Employee={data}/>
+    <Employee anbu={data}/>
     </>
   )
 }
